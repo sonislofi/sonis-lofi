@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soni's Lofi | Popular Videos</title>
+  <meta name="description" content="Soni's Lofi — relaxing music, study vibes, and popular YouTube videos.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #151b31;
+      --panel-2: #1d2540;
+      --text: #f6f3ff;
+      --muted: #b8bfd8;
+      --accent: #bca4ff;
+      --accent-2: #8ee4cf;
+      --border: rgba(255,255,255,.13);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(188,164,255,.18), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(142,228,207,.10), transparent 24%),
+        var(--bg);
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, 92%); margin: auto; }
+    header { padding: 22px 0; border-bottom: 1px solid var(--border); }
+    nav { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { font-weight:800; font-size:1.25rem; letter-spacing:-.04em; }
+    .brand span { color:var(--accent); }
+    nav a { text-decoration:none; color:var(--muted); margin-left:18px; font-size:.92rem; }
+    nav a:hover { color:var(--text); }
+    .hero { padding:75px 0 50px; text-align:center; }
+    .eyebrow { color:var(--accent-2); text-transform:uppercase; letter-spacing:.17em; font-size:.75rem; font-weight:800; }
+    h1,h2,h3 { letter-spacing:-.045em; }
+    h1 { font-size:clamp(2.8rem,8vw,6rem); line-height:.98; margin:18px 0; }
+    h1 span { color:var(--accent); }
+    .hero p { color:var(--muted); line-height:1.8; max-width:650px; margin:auto; }
+    .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-flex; justify-content:center; align-items:center; gap:8px; padding:13px 20px; border-radius:999px; text-decoration:none; font-weight:750; border:1px solid var(--border); }
+    .btn.primary { background:var(--accent); color:#161126; border-color:transparent; }
+    .btn.secondary { background:rgba(255,255,255,.04); }
+    section { padding:38px 0 75px; }
+    .section-top { display:flex; justify-content:space-between; align-items:end; gap:18px; margin-bottom:25px; }
+    .section-top h2 { font-size:clamp(1.8rem,4vw,3rem); margin:0; }
+    .section-top p { color:var(--muted); margin:7px 0 0; }
+    .notice { border:1px solid var(--border); background:rgba(255,255,255,.04); padding:14px 16px; border-radius:15px; color:var(--muted); line-height:1.6; margin-bottom:22px; }
+    .video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .video-card { background:rgba(21,27,49,.88); border:1px solid var(--border); border-radius:22px; overflow:hidden; }
+    .video-frame { aspect-ratio:16/9; width:100%; border:0; display:block; background:#080b15; }
+    .video-content { padding:18px; }
+    .video-content h3 { margin:0 0 8px; font-size:1.06rem; letter-spacing:-.02em; }
+    .video-content p { color:var(--muted); line-height:1.6; font-size:.9rem; margin:0 0 15px; }
+    .small-link { color:var(--accent); text-decoration:none; font-weight:700; font-size:.9rem; }
+    .empty { padding:28px; border:1px dashed var(--border); border-radius:20px; color:var(--muted); text-align:center; }
+    .security { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .security article { background:var(--panel); border:1px solid var(--border); border-radius:20px; padding:22px; }
+    .security h3 { margin:10px 0 8px; font-size:1rem; }
+    .security p { color:var(--muted); line-height:1.65; font-size:.9rem; margin:0; }
+    footer { text-align:center; padding:30px 0 42px; color:var(--muted); border-top:1px solid var(--border); font-size:.88rem; }
+    footer a { color:var(--accent); text-decoration:none; }
+    @media(max-width:850px) {
+      .video-grid { grid-template-columns:repeat(2,1fr); }
+      .security { grid-template-columns:1fr; }
+    }
+    @media(max-width:560px) {
+      nav a { display:none; }
+      .hero { padding-top:52px; }
+      .video-grid { grid-template-columns:1fr; }
+      .section-top { display:block; }
+      .section-top p { margin-top:10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <div class="brand">Soni's <span>Lofi.</span></div>
+        <div>
+          <a href="#popular">Popular</a>
+          <a href="#safety">Safety</a>
+          <a href="https://www.youtube.com/@sonislofi" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="eyebrow">Relax • Study • Dream</div>
+      <h1>Your peaceful <span>lofi</span> corner.</h1>
+      <p>
+        Welcome to Soni's Lofi. Explore selected popular videos, listen to relaxing
+        sounds, and visit the official YouTube channel whenever you want more.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#popular">Explore popular videos ↓</a>
+        <a class="btn secondary" href="https://www.youtube.com/@sonislofi" target="_blank" rel="noopener noreferrer">Visit YouTube ↗</a>
+      </div>
+    </section>
+
+    <section class="container" id="popular">
+      <div class="section-top">
+        <div>
+          <h2>Popular videos</h2>
+          <p>Manually selected videos from Soni's Lofi.</p>
+        </div>
+      </div>
+
+      <div class="notice">
+        <strong>How to add your videos:</strong>
+        Replace the sample YouTube video IDs in this file with the IDs of your own
+        videos. Keep only videos that have more than 3,000 views. The embedded player
+        is provided by YouTube; this website does not download or re-host the videos.
+      </div>
+
+      <!--
+        VIDEO EDITING GUIDE:
+        1. Find your video URL, e.g. https://www.youtube.com/watch?v=VIDEO_ID
+        2. Replace SAMPLE_VIDEO_ID_1 with the real video ID.
+        3. Update the title and description.
+        4. Duplicate or remove a video-card as needed.
+        5. A YouTube video ID normally looks like: dQw4w9WgXcQ
+      -->
+
+      <div class="video-grid">
+        <article class="video-card">
+          <iframe
+            class="video-frame"
+            src="https://www.youtube-nocookie.com/embed/57kbZ8KHEmw"
+            title="Soni's Lofi popular video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+          <div class="video-content">
+            <h3>Soni's Lofi — Featured Video</h3>
+            <p>Featured video added from your YouTube link. Confirm its current view count before labeling it as 3,000+ views.</p>
+            <a class="small-link" href="https://www.youtube.com/@sonislofi" target="_blank" rel="noopener noreferrer">Open channel ↗</a>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <iframe
+            class="video-frame"
+            src="https://www.youtube-nocookie.com/embed/SAMPLE_VIDEO_ID_2"
+            title="Soni's Lofi popular video 2"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+          <div class="video-content">
+            <h3>Study & Focus Mix 02</h3>
+            <p>Replace this sample with your second qualifying popular video.</p>
+            <a class="small-link" href="https://www.youtube.com/@sonislofi" target="_blank" rel="noopener noreferrer">Open channel ↗</a>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <iframe
+            class="video-frame"
+            src="https://www.youtube-nocookie.com/embed/SAMPLE_VIDEO_ID_3"
+            title="Soni's Lofi popular video 3"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+          <div class="video-content">
+            <h3>Night Vibes Mix 03</h3>
+            <p>Replace this sample with your third qualifying popular video.</p>
+            <a class="small-link" href="https://www.youtube.com/@sonislofi" target="_blank" rel="noopener noreferrer">Open channel ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="safety">
+      <div class="section-top">
+        <div>
+          <h2>Built with care</h2>
+          <p>Simple choices for a cleaner and safer visitor experience.</p>
+        </div>
+      </div>
+      <div class="security">
+        <article>
+          <div aria-hidden="true">🔒</div>
+          <h3>YouTube-hosted playback</h3>
+          <p>Videos are embedded from YouTube rather than downloaded or re-hosted by this website.</p>
+        </article>
+        <article>
+          <div aria-hidden="true">🛡️</div>
+          <h3>Privacy-enhanced embeds</h3>
+          <p>The embeds use YouTube's no-cookie domain where supported. YouTube may still process data when a visitor interacts with playback.</p>
+        </article>
+        <article>
+          <div aria-hidden="true">📱</div>
+          <h3>Mobile-friendly layout</h3>
+          <p>The video grid adapts to phones, tablets, and desktop screens with responsive sizing.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Soni's Lofi ·
+    <a href="https://www.youtube.com/@sonislofi" target="_blank" rel="noopener noreferrer">Official YouTube channel</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
